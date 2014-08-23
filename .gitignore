@@ -1,0 +1,7 @@
+node_modules/
+*.*~
+.sass-cache/
+temp.db
+.DS_Store
+.idea/
+cert/

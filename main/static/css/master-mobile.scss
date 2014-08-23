@@ -1,0 +1,61 @@
+body
+{
+
+}
+
+
+div#loginDiv
+{
+  width:100%;
+  margin:0 auto;
+
+  a
+  {
+    margin-right:15px;
+    font-size:100%;
+    margin-top:8px;
+  }
+
+  h1
+  {
+    font-size:4em;
+  }
+
+  input[type="submit"]
+  {
+    font-size:125%;
+    padding:10px;
+  }
+
+  span
+  {
+    font-size:1.25em;
+    margin-top:8px;
+  }
+
+  label
+  {
+    font-size:2em;
+    margin-right:5px;
+  }
+
+  input[type="text"],input[type="password"]
+  {
+    padding:5px;
+    font-size:2em;
+    margin-left:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    width:275px;
+  }
+}
+
+div#chat-wrapper
+{
+  width:100%;
+}
+
+.switch-div
+{
+  display:none;
+}

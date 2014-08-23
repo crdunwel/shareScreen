@@ -1,0 +1,76 @@
+<div id="chat-div" class="screenState">
+
+    <div id="chat-wrapper" class="chat-wrapper-desktop chat-wrapper-mobile">
+
+        <div id="chat-top-dashboard">
+
+            <div style="display:inline-block;float:left;">
+                <img id="dash-avatar" src="{{ receiver.avatar_url }}" />
+                <span id="nickName-display" class="midSize">{{ receiver.alias }}</span>
+                <img class="whitespace" src="/static/images/white_space.png" />
+            </div>
+
+            <div style="display:inline-block;float:right;height:32px;vertical-align:bottom">
+                <img class="whitespace" src="/static/images/white_space.png" />
+                <a id="set-user-emoticons" class="minSize">Set Emoticons</a> &sdot; <a id="change-user-info" class="minSize">Edit Profile</a>
+            </div>
+
+            <div class="clear-both"></div>
+
+        </div>
+
+        <div id="chat-inner">
+            <div id="chat-message-container">
+
+                {% for msg in messages %}
+                    {% include './frontPage/snippets/chat-msg.html' %}
+                {% endfor %}
+
+            </div>
+            <div id="chat-control-panel">
+
+                <div id="chat-textarea">
+                    <!--<textarea class="ckeditor" name="chateditor"></textarea>-->
+                    <textarea id="chatinput" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <div id="chat-control-options">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile-dialog">
+        <h5>Input a Nickname</h5>
+        <input id="nickName-input" type="text" name="nickname" placeholder="be creative!"/>
+        <h5>Upload an Avatar</h5>
+        <input id="avatar-input" type="file" accept='image/*' size="10"/>
+    </div>
+
+    <div id="emoticon-dialog">
+        <h5>Set Emoticons by Mapping Text to Images</h5>
+
+        {% for emoticon in emoticons %}
+            <div class="create-emoticon-ele">
+                <span>{{ loop.index }}.</span>
+                <input type="text" placeholder="=)" value="{{ emoticon.text }}"/>&rarr;
+                <input class="emoticon-img" type="file" accept='image/*' size="10" style="opacity:0;height:0;width:0; position:absolute;"/>
+                <img src="{{ emoticon.media_link }}" />
+            </div>
+        {% endfor %}
+
+        <div class="create-emoticon-ele">
+            <span>{{ emoticons.length + 1 }}.</span>
+            <input type="text" placeholder="=)"/>&rarr;
+            <input class="emoticon-img" type="file" accept='image/*' size="10" style="opacity:0;height:0;width:0;position:absolute;"/>
+            <img src="/static/images/clickbrowse.png"/>
+        </div>
+
+        <div id="create-emoticon-div">
+            <a id="create-new-emoticon">+New Emoticon+</a>
+        </div>
+    </div>
+
+
+</div>

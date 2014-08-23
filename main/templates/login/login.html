@@ -1,0 +1,71 @@
+{% extends "root.html" %}
+
+{% block body %}
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function()
+        {
+        /*
+            var $div = $('#ranCircles');
+            var interval = 250;
+            setInterval(function()
+            {
+                interval = Math.floor((Math.random()*250)+100);
+                var side = Math.floor((Math.random()*35)+5) + "px";
+                var posX = Math.floor((Math.random()*$(window).width())) + 'px';
+                var posY = Math.floor((Math.random()*$(window).height())) + 'px';
+                var colors = ['blue','red','yellow','green'];
+                var rcolor = colors[Math.floor(Math.random() * colors.length)];
+                var circle = '<div style="width:' + side + ';height:' + side + ';background-color:' + rcolor + ';position:' +
+                        'absolute;top:' + posY + ';left:' + posX + ';border-radius:' + side +'"></div>';
+
+                $div.append(circle);
+
+                if ($div.children().length > 250)
+                {
+                    $div.children().first().remove()
+                }
+            },interval);
+         */
+
+            $('#forgotPass').click(function(event)
+            {
+                alert("Tough luck.  If you stroke Clay's ego then he may help you.");
+            });
+
+
+        });
+
+
+    </script>
+
+    <div id="ranCircles"></div>
+
+
+    <div id="loginDiv">
+        <h1>Login to Chat</h1>
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <td><label for="usernameInput">Username</label></td>
+                    <td><input id="usernameInput" type="text" name="username" placeholder="enter username here"/></td>
+                </tr>
+                <tr>
+                    <td><label for="passwordInput">Password</label></td>
+                    <td><input id="passwordInput" type="password" name="password" placeholder="enter password here"/></td>
+                </tr>
+                <tr>
+                    <td colspan=2>
+                        <input type="submit" value="Log In" style="float:right"/>
+                        <a id="forgotPass">Forget Password?</a>
+                        <span>{{ error }}</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+{% endblock %}

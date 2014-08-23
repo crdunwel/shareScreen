@@ -1,0 +1,379 @@
+@charset "UTF-8";
+
+@font-face
+{
+  font-family:"sonus";
+  src:url('../resources/SonusLig.otf');
+}
+
+body
+{
+  margin:0 0 0 0;
+  padding:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family:"sonus","Helvetica",sans-serif;
+}
+
+textarea
+{
+  font:"sonus";
+}
+
+h5
+{
+  text-align:center;
+}
+
+a
+{
+  color: #155ac3;
+
+  &:link
+  {
+    color: #155ac3;
+
+    &:hover
+    {
+      cursor:pointer;
+      text-decoration:underline;
+    }
+
+    &:visited
+    {
+      color: #c37823;
+    }
+  }
+
+  &:hover
+  {
+    color: #4773ff;
+    cursor:pointer;
+  }
+}
+
+.marginAuto
+{
+  margin:auto;
+}
+
+.textAlignCenter
+{
+  text-align:center;
+}
+
+div#loginDiv
+{
+  margin:auto;
+  text-align:center;
+  position:relative;
+  z-index:100;
+  background-color:white;
+  border:1px solid black;
+
+  a
+  {
+    float:right;
+  }
+
+  h1
+  {
+
+  }
+
+  input[type="submit"]
+  {
+
+  }
+
+  span
+  {
+    float:left;
+    color:red;
+  }
+
+  label
+  {
+
+  }
+
+  input[type="text"],input[type="password"]
+  {
+    float:right;
+  }
+
+  table
+  {
+    margin:auto;
+  }
+}
+
+.midSize
+{
+  font-size:22px;
+}
+
+.minSize
+{
+  font-size:16px;
+}
+
+div#main-div
+{
+  height:100%;
+}
+
+img.dragImage
+{
+  position:absolute;
+}
+
+div.screenState
+{
+  width:100%;
+  height:100%;
+}
+
+div#profile-dialog
+{
+  h5
+  {
+    font-size:18px;
+    text-align:center;
+    margin-top:25px;
+    margin-bottom:25px;
+  }
+
+  input
+  {
+    width:275px;
+    text-align:center;
+    margin:auto;
+  }
+}
+
+div#chat-wrapper
+{
+  width:615px;
+  margin-left:auto;
+  margin-right:auto;
+
+  div#chat-top-dashboard
+  {
+    margin-bottom:3px;
+
+    img
+    {
+      vertical-align:bottom;
+      margin-right:5px;
+    }
+
+  }
+
+  div#chat-inner
+  {
+    border:1px solid black;
+
+    div#chat-message-container
+    {
+      overflow-y:auto;
+      word-wrap:break-word;
+    }
+
+    div#chat-control-panel
+    {
+      height:100px;
+      border-top:1px solid black;
+
+      div#chat-control-options
+      {
+        height:30px;
+        position:relative;
+        bottom:30px;
+        float:right;
+
+        input[type="submit"]
+        {
+          height:31px;
+        }
+      }
+    }
+  }
+}
+
+.switch-div
+{
+  z-index:1000;
+  position:absolute;
+  top:0px;
+  width:75px;
+  height:100%;
+
+  &:hover
+  {
+    cursor:pointer;
+  }
+
+  img
+  {
+    position:absolute;
+    top:45%;
+    opacity:0.7;
+  }
+}
+
+div#left-switch-div
+{
+  left:0px;
+  background: linear-gradient(to right, rgba(112,112,112,0.65) 0%,rgba(1,1,1,0) 98%,rgba(0,0,0,0) 99%);
+
+  img
+  {
+    left:0;
+  }
+}
+
+div#right-switch-div
+{
+  right:0px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(112,112,112,0.65) 100%);
+
+  img
+  {
+    right:0;
+  }
+}
+
+
+div#webcam-div-wrapper
+{
+  margin:auto;
+
+  canvas#recCanvas
+  {
+    margin:auto;
+  }
+}
+
+img.whitespace
+{
+  width:1px;
+  height:50px;
+}
+
+div.chat-msg
+{
+  margin-top:5px;
+  margin-bottom:5px;
+
+  div.chat-msg-text
+  {
+    word-wrap:break-word;
+  }
+
+}
+
+div.chat-avatar
+{
+  float:left
+}
+
+div.chat-text
+{
+  float:left;
+  margin-left:2%;
+  width:89%;
+  word-wrap:break-word;
+}
+
+div#chat-textarea
+{
+  width:100%;
+  height:100%;
+
+  textarea
+  {
+    font:"sonus";
+    width:100%;
+    height:100%;
+    border:0;
+    padding:10px;
+    margin:0px;
+    box-sizing: border-box;
+    resize:none;
+
+    &:focus
+    {
+      outline:none;
+      border: 1px solid #4297D7;
+    }
+
+  }
+
+}
+
+
+
+div.clear-both
+{
+  clear:both;
+}
+
+span.timestamp
+{
+  font-size:14px;
+  color: #a3a3a3;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+span.alias
+{
+  font-weight:bold;
+}
+
+div.create-emoticon-ele
+{
+  margin-bottom:20px;
+
+  img
+  {
+    max-height:75px;
+    max-width:255px;
+    vertical-align:middle;
+    margin-left:15px;
+    border:3px solid #a6c9e2;
+
+    &:hover
+    {
+      border:3px solid #4297d7;
+      cursor:pointer;
+    }
+  }
+
+  input[type="text"]
+  {
+    width:50px;
+    margin-left:15px;
+    margin-right:15px;
+    text-align:center;
+  }
+
+  input[type="file"]
+  {
+    margin-left:15px;
+    width:255px;
+  }
+}
+
+div#create-emoticon-div
+{
+  text-align:center;
+}
+
+canvas#drawCanvas
+{
+  position:absolute;
+  z-index:101;
+}

@@ -1,0 +1,17 @@
+{% extends "root_secure.html" %}
+
+{% block body %}
+
+    <div id="left-switch-div" class="switch-div">
+        <img src="/static/images/arrow-left.png"/>
+    </div>
+
+    {% include "frontPage/imgSharing-div.html" %}
+    {% include "frontPage/chat-div.html" %}
+    {% include "frontPage/webcam-div.html" %}
+
+    <div id="right-switch-div" class="switch-div">
+        <img src="/static/images/arrow-right.png"/>
+    </div>
+
+{% endblock %}

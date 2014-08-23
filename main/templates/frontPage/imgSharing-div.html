@@ -1,0 +1,9 @@
+<div id="imgSharing-div" class="screenState" style="display:none">
+
+    <canvas id="drawCanvas" resize keepalive=true data-paper-keepalive="true"></canvas>
+
+    {% for image in images %}
+        <img src="{{ image.url }}" id="img.{{ image.id }}" class="dragImage" style="position:absolute;top:{{ image.yPos }}px;left:{{ image.xPos }}px" />
+    {% endfor %}
+
+</div>

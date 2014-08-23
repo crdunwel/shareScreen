@@ -1,0 +1,21 @@
+<div class="chat-msg">
+    <div class="chat-avatar" {% if msg.user.id != receiver.id %} style="float:right" {% endif %}>
+        <img src="{{ msg.user.avatar_url }}" />
+    </div>
+    <div class="chat-text">
+        <div class="timestamp-div" {% if msg.user.id != receiver.id %} style="text-align:right" {% endif %}>
+            {% if msg.user.id != receiver.id%}
+            <span class="timestamp" style="text-align:right">{{ msg.createdAt }}</span>
+            {% endif %}
+            <span class="alias">{{ msg.user.alias }}</span>
+            {% if msg.user.id == receiver.id %}
+            <span class="timestamp">{{ msg.createdAt }}</span>
+            {% endif %}
+            <div class="clear-both"></div>
+        </div>
+        <div class="chat-msg-text" {% if msg.user.id != receiver.id %} style="text-align:right" {% endif %}>
+            {{ msg.text }}
+        </div>
+    </div>
+    <div class="clear-both"></div>
+</div>

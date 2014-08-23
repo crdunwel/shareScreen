@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Secure Chat & Draw</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no, width=device-width" />
+    {% block meta %}{% endblock %}
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui-1.10.2.custom.min.js"></script>
+    {% block jscripts %} {% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/css/master.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/master-desktop.css" media="only screen and (min-width: 1024px)"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/master-mobile.css"  media="only screen and (min-device-width:320px) and (max-width: 1024px)"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/redmond/jquery-ui-1.10.2.custom.min.css"/>
+    {% block css %} {% endblock %}
+</head>
+<body>
+<div id="main-div">
+    {% block body %}
+        <!-- start content here -->
+    {% endblock %}
+</div>
+</body>
+</html>

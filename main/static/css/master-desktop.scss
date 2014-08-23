@@ -1,0 +1,65 @@
+body
+{
+  font-size:16px;
+}
+
+textarea
+{
+  font-size:16px;
+}
+
+h5
+{
+  font-size:18px;
+}
+
+div#loginDiv
+{
+  width:600px;
+  margin-top:150px;
+  padding:50px;
+
+  a
+  {
+    margin-right:10px;
+    font-size:14px;
+    margin-top:8px;
+  }
+
+  h1
+  {
+    font-size:72px;
+  }
+
+  input[type="submit"]
+  {
+    font-size:18px;
+  }
+
+  span
+  {
+    font-size:14px;
+    margin-top:8px;
+  }
+
+  label
+  {
+    font-size:28px;
+    margin-right:5px;
+  }
+
+  input[type="text"],input[type="password"]
+  {
+    padding:5px;
+    font-size:28px;
+    margin-left:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    width:275px;
+  }
+}
+
+.chat-wrapper-desktop
+{
+
+}
